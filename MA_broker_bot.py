@@ -1,3 +1,4 @@
+
 import os
 import asyncio
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -22,19 +23,19 @@ TOKEN = "8895944449:AAEtJYCSz9RXld1xmSljjgirnE10xSkz3sM"
 
 # --- الأوامر الرئيسية ---
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # رابط الواتساب المباشر مع الرقم والرسالة المجهزة
-    whatsapp_url = "https://wa.me/96171229665?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A8%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20M.A%20Broker"
+    # رابط الواتساب المباشر لرقم 71229665
+    whatsapp_url = "https://wa.me/96171229665?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D9%85%D9%8A%D8%B1%20%D8%A3%D9%85%D9%8A%D8%B1%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20M.A%20Broker"
     
-    # رابط صفحة/حساب التلغرام المباشر
-    telegram_contact = "https://t.me/mhamadassaad1987"
+    # رابط صفحة/حساب أمير أمير على التلغرام
+    telegram_amir = "https://t.me/mhamadassaad1987"
 
     keyboard = [
         [InlineKeyboardButton("📱 التواصل عبر الواتساب (71229665)", url=whatsapp_url)],
-        [InlineKeyboardButton("💬 الدعم الفني على التلغرام", url=telegram_contact)]
+        [InlineKeyboardButton("💬 التواصل عبر التليجرام (أمير أمير)", url=telegram_amir)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "أهلاً بك في بوت M.A Broker للخدمات المالية والتداول! 📈\n\nاختر إحدى الطرق أدناه للتواصل المباشر معنا:",
+        "أهلاً بك في بوت M.A Broker للخدمات المالية والتداول! 📈\nمرحباً بك مع **أمير أمير**، اختر إحدى الطرق أدناه للتواصل المباشر معنا:",
         reply_markup=reply_markup
     )
 
